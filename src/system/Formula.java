@@ -1,7 +1,6 @@
 package system;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Stack;
 
 public class Formula {
@@ -37,24 +36,23 @@ public class Formula {
                 }
             }
         }
-        while(!stack.empty()) {
+        while (!stack.empty()) {
             wrongSymbolsPositions.add(stack.pop().getPosition());
         }
         return wrongSymbolsPositions;
     }
 
-
     private class Symbol {
         private char symbol;
         private int position;
 
-        public int getPosition() {
-            return position;
-        }
-
         private Symbol(char symbol, int position) {
             this.symbol = symbol;
             this.position = position;
+        }
+
+        public int getPosition() {
+            return position;
         }
     }
 }

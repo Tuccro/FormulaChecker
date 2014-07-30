@@ -7,8 +7,7 @@ public class Utils {
 
     public static boolean fileExists(String filePath) {
         File file = new File(filePath);
-        if (file.canRead()) return true;
-        else return false;
+        return file.canRead();
     }
 
     public static boolean filesChecker(String fileIn, String fileOut) {
@@ -23,9 +22,8 @@ public class Utils {
 
     }
 
-
     public static String symbolPointerString(int stringSize, ArrayList<Integer> numbers) {
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuffer = new StringBuilder();
         stringBuffer.setLength(stringSize);
         for (int i = 0; i < stringSize; i++) {
             stringBuffer.setCharAt(i, ' ');
